@@ -290,9 +290,9 @@ class _FMValidThruFieldState extends State<FMValidThruField> {
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (input) {
         if (input!.isEmpty) {
-          return "Valid Thru can't be empty";
+          return "Insira uma data";
         } else if (input.length < 5) {
-          return "Valid Thru must be 4 characters";
+          return "A validade precisa ter 4 caracteres";
         }
         // getting current year
         int currentYear = int.parse("${DateTime.now().year}".substring(2, 4));

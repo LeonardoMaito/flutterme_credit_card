@@ -282,7 +282,7 @@ class _FMNumberFieldState extends State<FMNumberField> {
       keyboardType: TextInputType.number,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (input) {
-        if (input!.isEmpty) return "Card Number can't be empty";
+        if (input!.isEmpty) return "Insira um número válido";
         return null;
       },
       // extra params

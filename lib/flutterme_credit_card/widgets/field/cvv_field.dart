@@ -287,9 +287,9 @@ class _FMCvvFieldState extends State<FMCvvField> {
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (input) {
         if (input!.isEmpty) {
-          return "CVV can't be empty";
+          return "Insira um CVV";
         } else if (input.length < 3) {
-          return "CVV must be 3 or 4 characters";
+          return "CVV precisa ser 3 ou 4 caracteres";
         }
         return null;
       },

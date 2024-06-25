@@ -170,7 +170,7 @@ class _CardBodyState extends State<CardBody> {
   /// The card footer containing the *Card Holder Name*
   Widget footer(String holder) {
     return Text(
-      holder.isEmpty ? "John Doe" : holder,
+      holder.isEmpty ? "Nome Pessoal" : holder,
       style: widget.holderStyle,
       maxLines: 1,
       overflow: TextOverflow.ellipsis,

@@ -308,12 +308,12 @@ class _FMValidThruFieldState extends State<FMValidThruField> {
 
         // return [FMCardException] if month is invalid
         if (!isMonthValid) {
-          return "Invalid month given. Month range must be between 01-12!";
+          return "Mês Inválido!";
         }
 
         // return [FMCardException] if year is invalid
         if (!isYearValid) {
-          return "Invalid year given. Year must be in the future!";
+          return "Ano Inválido!";
         }
         return null;
       },

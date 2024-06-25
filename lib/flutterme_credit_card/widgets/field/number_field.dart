@@ -268,6 +268,24 @@ class FMNumberField extends StatefulWidget {
 }
 
 class _FMNumberFieldState extends State<FMNumberField> {
+	
+	bool _isLuhnValid(String input) {
+    int sum = 0;
+    bool alternate = false;
+    for (int i = input.length - 1; i >= 0; i--) {
+      int n = int.parse(input[i]);
+      if (alternate) {
+        n *= 2;
+        if (n > 9) {
+          n -= 9;
+        }
+      }
+      sum += n;
+      alternate = !alternate;
+    }
+    return sum % 10 == 0;
+  }
+  
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -283,6 +301,8 @@ class _FMNumberFieldState extends State<FMNumberField> {
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (input) {
         if (input!.isEmpty) return "Insira um número válido";
+        input = input.replaceAll(RegExp(r'\s+\b|\b\s'), ''); // Remove spaces
+        if (!_isLuhnValid(input)) return "Número do cartão inválido";
         return null;
       },
       // extra params

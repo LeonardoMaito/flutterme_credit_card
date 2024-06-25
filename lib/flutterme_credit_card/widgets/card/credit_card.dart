@@ -42,7 +42,7 @@ class FMCreditCard extends StatefulWidget {
     this.cvv = "000",
     this.cvvStyle = const TextStyle(color: Colors.white),
     this.cvvMaskType = FMMaskType.full,
-    this.holder = "John Doe",
+    this.holder = "Nome Pessoal",
     this.holderStyle = const TextStyle(fontSize: 20, color: Colors.white),
   });
 
